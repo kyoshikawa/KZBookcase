@@ -1,0 +1,459 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CCC68CC6189ECD8100E23DB2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC68CC5189ECD8100E23DB2 /* Foundation.framework */; };
+		CCC68CC8189ECD8100E23DB2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC68CC7189ECD8100E23DB2 /* CoreGraphics.framework */; };
+		CCC68CCA189ECD8100E23DB2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC68CC9189ECD8100E23DB2 /* UIKit.framework */; };
+		CCC68CD0189ECD8100E23DB2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CCC68CCE189ECD8100E23DB2 /* InfoPlist.strings */; };
+		CCC68CD2189ECD8100E23DB2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC68CD1189ECD8100E23DB2 /* main.m */; };
+		CCC68CD6189ECD8100E23DB2 /* KZAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC68CD5189ECD8100E23DB2 /* KZAppDelegate.m */; };
+		CCC68CD8189ECD8100E23DB2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCC68CD7189ECD8100E23DB2 /* Images.xcassets */; };
+		CCC68CDF189ECD8100E23DB2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC68CDE189ECD8100E23DB2 /* XCTest.framework */; };
+		CCC68CE0189ECD8100E23DB2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC68CC5189ECD8100E23DB2 /* Foundation.framework */; };
+		CCC68CE1189ECD8100E23DB2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC68CC9189ECD8100E23DB2 /* UIKit.framework */; };
+		CCC68CE9189ECD8100E23DB2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CCC68CE7189ECD8100E23DB2 /* InfoPlist.strings */; };
+		CCC68CEB189ECD8100E23DB2 /* KZBookshelfTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC68CEA189ECD8100E23DB2 /* KZBookshelfTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CCC68CE2189ECD8100E23DB2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CCC68CBA189ECD8100E23DB2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CCC68CC1189ECD8100E23DB2;
+			remoteInfo = KZBookshelf;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CCC68CC2189ECD8100E23DB2 /* KZBookshelf.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KZBookshelf.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCC68CC5189ECD8100E23DB2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CCC68CC7189ECD8100E23DB2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CCC68CC9189ECD8100E23DB2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CCC68CCD189ECD8100E23DB2 /* KZBookshelf-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KZBookshelf-Info.plist"; sourceTree = "<group>"; };
+		CCC68CCF189ECD8100E23DB2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CCC68CD1189ECD8100E23DB2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CCC68CD3189ECD8100E23DB2 /* KZBookshelf-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KZBookshelf-Prefix.pch"; sourceTree = "<group>"; };
+		CCC68CD4189ECD8100E23DB2 /* KZAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KZAppDelegate.h; sourceTree = "<group>"; };
+		CCC68CD5189ECD8100E23DB2 /* KZAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KZAppDelegate.m; sourceTree = "<group>"; };
+		CCC68CD7189ECD8100E23DB2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CCC68CDD189ECD8100E23DB2 /* KZBookshelfTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KZBookshelfTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCC68CDE189ECD8100E23DB2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		CCC68CE6189ECD8100E23DB2 /* KZBookshelfTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KZBookshelfTests-Info.plist"; sourceTree = "<group>"; };
+		CCC68CE8189ECD8100E23DB2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CCC68CEA189ECD8100E23DB2 /* KZBookshelfTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KZBookshelfTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CCC68CBF189ECD8100E23DB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCC68CC8189ECD8100E23DB2 /* CoreGraphics.framework in Frameworks */,
+				CCC68CCA189ECD8100E23DB2 /* UIKit.framework in Frameworks */,
+				CCC68CC6189ECD8100E23DB2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCC68CDA189ECD8100E23DB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCC68CDF189ECD8100E23DB2 /* XCTest.framework in Frameworks */,
+				CCC68CE1189ECD8100E23DB2 /* UIKit.framework in Frameworks */,
+				CCC68CE0189ECD8100E23DB2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CCC68CB9189ECD8100E23DB2 = {
+			isa = PBXGroup;
+			children = (
+				CCC68CCB189ECD8100E23DB2 /* KZBookshelf */,
+				CCC68CE4189ECD8100E23DB2 /* KZBookshelfTests */,
+				CCC68CC4189ECD8100E23DB2 /* Frameworks */,
+				CCC68CC3189ECD8100E23DB2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CCC68CC3189ECD8100E23DB2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CCC68CC2189ECD8100E23DB2 /* KZBookshelf.app */,
+				CCC68CDD189ECD8100E23DB2 /* KZBookshelfTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CCC68CC4189ECD8100E23DB2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CCC68CC5189ECD8100E23DB2 /* Foundation.framework */,
+				CCC68CC7189ECD8100E23DB2 /* CoreGraphics.framework */,
+				CCC68CC9189ECD8100E23DB2 /* UIKit.framework */,
+				CCC68CDE189ECD8100E23DB2 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CCC68CCB189ECD8100E23DB2 /* KZBookshelf */ = {
+			isa = PBXGroup;
+			children = (
+				CCC68CD4189ECD8100E23DB2 /* KZAppDelegate.h */,
+				CCC68CD5189ECD8100E23DB2 /* KZAppDelegate.m */,
+				CCC68CD7189ECD8100E23DB2 /* Images.xcassets */,
+				CCC68CCC189ECD8100E23DB2 /* Supporting Files */,
+			);
+			path = KZBookshelf;
+			sourceTree = "<group>";
+		};
+		CCC68CCC189ECD8100E23DB2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CCC68CCD189ECD8100E23DB2 /* KZBookshelf-Info.plist */,
+				CCC68CCE189ECD8100E23DB2 /* InfoPlist.strings */,
+				CCC68CD1189ECD8100E23DB2 /* main.m */,
+				CCC68CD3189ECD8100E23DB2 /* KZBookshelf-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CCC68CE4189ECD8100E23DB2 /* KZBookshelfTests */ = {
+			isa = PBXGroup;
+			children = (
+				CCC68CEA189ECD8100E23DB2 /* KZBookshelfTests.m */,
+				CCC68CE5189ECD8100E23DB2 /* Supporting Files */,
+			);
+			path = KZBookshelfTests;
+			sourceTree = "<group>";
+		};
+		CCC68CE5189ECD8100E23DB2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CCC68CE6189ECD8100E23DB2 /* KZBookshelfTests-Info.plist */,
+				CCC68CE7189ECD8100E23DB2 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CCC68CC1189ECD8100E23DB2 /* KZBookshelf */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCC68CEE189ECD8100E23DB2 /* Build configuration list for PBXNativeTarget "KZBookshelf" */;
+			buildPhases = (
+				CCC68CBE189ECD8100E23DB2 /* Sources */,
+				CCC68CBF189ECD8100E23DB2 /* Frameworks */,
+				CCC68CC0189ECD8100E23DB2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KZBookshelf;
+			productName = KZBookshelf;
+			productReference = CCC68CC2189ECD8100E23DB2 /* KZBookshelf.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CCC68CDC189ECD8100E23DB2 /* KZBookshelfTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCC68CF1189ECD8100E23DB2 /* Build configuration list for PBXNativeTarget "KZBookshelfTests" */;
+			buildPhases = (
+				CCC68CD9189ECD8100E23DB2 /* Sources */,
+				CCC68CDA189ECD8100E23DB2 /* Frameworks */,
+				CCC68CDB189ECD8100E23DB2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CCC68CE3189ECD8100E23DB2 /* PBXTargetDependency */,
+			);
+			name = KZBookshelfTests;
+			productName = KZBookshelfTests;
+			productReference = CCC68CDD189ECD8100E23DB2 /* KZBookshelfTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CCC68CBA189ECD8100E23DB2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = KZ;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Electricwoods LLC";
+				TargetAttributes = {
+					CCC68CDC189ECD8100E23DB2 = {
+						TestTargetID = CCC68CC1189ECD8100E23DB2;
+					};
+				};
+			};
+			buildConfigurationList = CCC68CBD189ECD8100E23DB2 /* Build configuration list for PBXProject "KZBookshelf" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CCC68CB9189ECD8100E23DB2;
+			productRefGroup = CCC68CC3189ECD8100E23DB2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CCC68CC1189ECD8100E23DB2 /* KZBookshelf */,
+				CCC68CDC189ECD8100E23DB2 /* KZBookshelfTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CCC68CC0189ECD8100E23DB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCC68CD0189ECD8100E23DB2 /* InfoPlist.strings in Resources */,
+				CCC68CD8189ECD8100E23DB2 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCC68CDB189ECD8100E23DB2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCC68CE9189ECD8100E23DB2 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CCC68CBE189ECD8100E23DB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCC68CD2189ECD8100E23DB2 /* main.m in Sources */,
+				CCC68CD6189ECD8100E23DB2 /* KZAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCC68CD9189ECD8100E23DB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CCC68CEB189ECD8100E23DB2 /* KZBookshelfTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CCC68CE3189ECD8100E23DB2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CCC68CC1189ECD8100E23DB2 /* KZBookshelf */;
+			targetProxy = CCC68CE2189ECD8100E23DB2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CCC68CCE189ECD8100E23DB2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCC68CCF189ECD8100E23DB2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CCC68CE7189ECD8100E23DB2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CCC68CE8189ECD8100E23DB2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CCC68CEC189ECD8100E23DB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		CCC68CED189ECD8100E23DB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CCC68CEF189ECD8100E23DB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KZBookshelf/KZBookshelf-Prefix.pch";
+				INFOPLIST_FILE = "KZBookshelf/KZBookshelf-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CCC68CF0189ECD8100E23DB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KZBookshelf/KZBookshelf-Prefix.pch";
+				INFOPLIST_FILE = "KZBookshelf/KZBookshelf-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		CCC68CF2189ECD8100E23DB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KZBookshelf.app/KZBookshelf";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KZBookshelf/KZBookshelf-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "KZBookshelfTests/KZBookshelfTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		CCC68CF3189ECD8100E23DB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KZBookshelf.app/KZBookshelf";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KZBookshelf/KZBookshelf-Prefix.pch";
+				INFOPLIST_FILE = "KZBookshelfTests/KZBookshelfTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CCC68CBD189ECD8100E23DB2 /* Build configuration list for PBXProject "KZBookshelf" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCC68CEC189ECD8100E23DB2 /* Debug */,
+				CCC68CED189ECD8100E23DB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CCC68CEE189ECD8100E23DB2 /* Build configuration list for PBXNativeTarget "KZBookshelf" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCC68CEF189ECD8100E23DB2 /* Debug */,
+				CCC68CF0189ECD8100E23DB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CCC68CF1189ECD8100E23DB2 /* Build configuration list for PBXNativeTarget "KZBookshelfTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CCC68CF2189ECD8100E23DB2 /* Debug */,
+				CCC68CF3189ECD8100E23DB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CCC68CBA189ECD8100E23DB2 /* Project object */;
+}
