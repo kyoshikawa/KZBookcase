@@ -1,22 +1,24 @@
 //
-//  KZAppDelegate.m
-//  KZBookshelf
+//	KZAppDelegate.m
+//	KZBookshelf
 //
-//  Created by kyoshikawa on 14/2/2.
-//  Copyright (c) 2014 Electricwoods LLC. All rights reserved.
+//	Created by Kaz Yoshikawa on 14/2/2.
+//	Copyright (c) 2014 Digital Lynx. All rights reserved.
 //
 
 #import "KZAppDelegate.h"
+
+//
+//	KZAppDelegate
+//
 
 @implementation KZAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
-    return YES;
+	self.window.backgroundColor = [UIColor whiteColor];
+	[self.window makeKeyAndVisible];
+	return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

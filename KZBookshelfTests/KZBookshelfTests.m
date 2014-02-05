@@ -2,8 +2,8 @@
 //  KZBookshelfTests.m
 //  KZBookshelfTests
 //
-//  Created by kyoshikawa on 14/2/2.
-//  Copyright (c) 2014 Electricwoods LLC. All rights reserved.
+//  Created by Kaz Yoshikawa on 14/2/2.
+//  Copyright (c) 2014 Digital Lynx. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>

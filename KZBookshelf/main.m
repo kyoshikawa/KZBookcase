@@ -2,8 +2,8 @@
 //  main.m
 //  KZBookshelf
 //
-//  Created by kyoshikawa on 14/2/2.
-//  Copyright (c) 2014 Electricwoods LLC. All rights reserved.
+//  Created by Kaz Yoshikawa on 14/2/2.
+//  Copyright (c) 2014 Digital Lynx. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -13,6 +13,6 @@
 int main(int argc, char * argv[])
 {
 	@autoreleasepool {
-	    return UIApplicationMain(argc, argv, nil, NSStringFromClass([KZAppDelegate class]));
+	    return UIApplicationMain(argc, argv, nil, nil);
 	}
 }
