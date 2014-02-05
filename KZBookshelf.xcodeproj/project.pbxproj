@@ -9,6 +9,16 @@
 /* Begin PBXBuildFile section */
 		CC036011189FEBFE00C598AD /* KZBookcaseReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC036010189FEBFE00C598AD /* KZBookcaseReusableView.m */; };
 		CC03605F18A0548300C598AD /* KZBookcaseSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC03605E18A0548300C598AD /* KZBookcaseSectionView.m */; };
+		CC2FA86A18A1F9FB00F9CFDA /* Bookcase-Section-1024.png in Resources */ = {isa = PBXBuildFile; fileRef = CCDA8DB018A1911600224274 /* Bookcase-Section-1024.png */; };
+		CC2FA86B18A1F9FB00F9CFDA /* Bookcase-Section-1024@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CCDA8DB118A1911600224274 /* Bookcase-Section-1024@2x.png */; };
+		CC2FA86C18A1F9FB00F9CFDA /* Bookcase-Section-320.png in Resources */ = {isa = PBXBuildFile; fileRef = CCDA8DB218A1911600224274 /* Bookcase-Section-320.png */; };
+		CC2FA86D18A1F9FB00F9CFDA /* Bookcase-Section-320@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CCDA8DB318A1911600224274 /* Bookcase-Section-320@2x.png */; };
+		CC2FA86E18A1F9FB00F9CFDA /* Bookcase-Section-480.png in Resources */ = {isa = PBXBuildFile; fileRef = CCDA8DB418A1911600224274 /* Bookcase-Section-480.png */; };
+		CC2FA86F18A1F9FB00F9CFDA /* Bookcase-Section-480@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CCDA8DB518A1911600224274 /* Bookcase-Section-480@2x.png */; };
+		CC2FA87018A1F9FB00F9CFDA /* Bookcase-Section-568.png in Resources */ = {isa = PBXBuildFile; fileRef = CCDA8DB618A1911600224274 /* Bookcase-Section-568.png */; };
+		CC2FA87118A1F9FB00F9CFDA /* Bookcase-Section-568@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CCDA8DB718A1911600224274 /* Bookcase-Section-568@2x.png */; };
+		CC2FA87218A1F9FB00F9CFDA /* Bookcase-Section-768.png in Resources */ = {isa = PBXBuildFile; fileRef = CCDA8DB818A1911600224274 /* Bookcase-Section-768.png */; };
+		CC2FA87318A1F9FB00F9CFDA /* Bookcase-Section-768@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CCDA8DB918A1911600224274 /* Bookcase-Section-768@2x.png */; };
 		CCC68CC6189ECD8100E23DB2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC68CC5189ECD8100E23DB2 /* Foundation.framework */; };
 		CCC68CC8189ECD8100E23DB2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC68CC7189ECD8100E23DB2 /* CoreGraphics.framework */; };
 		CCC68CCA189ECD8100E23DB2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC68CC9189ECD8100E23DB2 /* UIKit.framework */; };
@@ -504,12 +514,17 @@
 			files = (
 				CCDA8E0118A1914A00224274 /* yourmagazine.04.png in Resources */,
 				CCC68D08189EDACA00E23DB2 /* KZSampleBookshelfViewController~ipad.xib in Resources */,
+				CC2FA86B18A1F9FB00F9CFDA /* Bookcase-Section-1024@2x.png in Resources */,
+				CC2FA86D18A1F9FB00F9CFDA /* Bookcase-Section-320@2x.png in Resources */,
 				CCDA8DC718A1911600224274 /* Bookcase-Row-320@2x.png in Resources */,
 				CCDA8DE018A1911600224274 /* Bookcase-Shelf-768.png in Resources */,
 				CCDA8DDD18A1911600224274 /* Bookcase-Shelf-480@2x.png in Resources */,
+				CC2FA87318A1F9FB00F9CFDA /* Bookcase-Section-768@2x.png in Resources */,
 				CCDA8E0B18A1914A00224274 /* yourmagazine.09.png in Resources */,
 				CCC68CD0189ECD8100E23DB2 /* InfoPlist.strings in Resources */,
+				CC2FA86C18A1F9FB00F9CFDA /* Bookcase-Section-320.png in Resources */,
 				CCC68CFA189ECEA400E23DB2 /* MainWindow~ipad.xib in Resources */,
+				CC2FA87218A1F9FB00F9CFDA /* Bookcase-Section-768.png in Resources */,
 				CCDA8E0F18A1914A00224274 /* yourmagazine.11.png in Resources */,
 				CCDA8DDC18A1911600224274 /* Bookcase-Shelf-480.png in Resources */,
 				CCDA8E0E18A1914A00224274 /* yourmagazine.10@2x.png in Resources */,
@@ -521,7 +536,9 @@
 				CCDA8DC818A1911600224274 /* Bookcase-Row-480.png in Resources */,
 				CCDA8DFC18A1914A00224274 /* yourmagazine.01@2x.png in Resources */,
 				CCDA8DDF18A1911600224274 /* Bookcase-Shelf-568@2x.png in Resources */,
+				CC2FA86A18A1F9FB00F9CFDA /* Bookcase-Section-1024.png in Resources */,
 				CCDA8E0918A1914A00224274 /* yourmagazine.08.png in Resources */,
+				CC2FA86E18A1F9FB00F9CFDA /* Bookcase-Section-480.png in Resources */,
 				CCDA8E0818A1914A00224274 /* yourmagazine.07@2x.png in Resources */,
 				CCDA8E0318A1914A00224274 /* yourmagazine.05.png in Resources */,
 				CCDA8E0518A1914A00224274 /* yourmagazine.06.png in Resources */,
@@ -531,7 +548,9 @@
 				CCDA8E0A18A1914A00224274 /* yourmagazine.08@2x.png in Resources */,
 				CCDA8DCB18A1911600224274 /* Bookcase-Row-568@2x.png in Resources */,
 				CCDA8DCC18A1911600224274 /* Bookcase-Row-768.png in Resources */,
+				CC2FA86F18A1F9FB00F9CFDA /* Bookcase-Section-480@2x.png in Resources */,
 				CCDA8DC518A1911600224274 /* Bookcase-Row-1024@2x.png in Resources */,
+				CC2FA87018A1F9FB00F9CFDA /* Bookcase-Section-568.png in Resources */,
 				CCDA8E1618A1924400224274 /* KZSampleBookshelfViewController~iphone.xib in Resources */,
 				CCDA8DCA18A1911600224274 /* Bookcase-Row-568.png in Resources */,
 				CCDA8E1218A1914A00224274 /* yourmagazine.12@2x.png in Resources */,
@@ -552,6 +571,7 @@
 				CCDA8E0218A1914A00224274 /* yourmagazine.04@2x.png in Resources */,
 				CCDA8E0018A1914A00224274 /* yourmagazine.03@2x.png in Resources */,
 				CCDA8E0D18A1914A00224274 /* yourmagazine.10.png in Resources */,
+				CC2FA87118A1F9FB00F9CFDA /* Bookcase-Section-568@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

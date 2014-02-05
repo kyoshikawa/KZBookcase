@@ -66,7 +66,7 @@
 
 - (NSInteger)numberOfSectionsInBookcaseView:(KZBookcaseView *)bookshelfView
 {
-	return 100;
+	return 13;
 }
 
 - (NSInteger)bookcaseView:(KZBookcaseView *)bookshelfView numberOfItemsInSection:(NSInteger)section
@@ -81,7 +81,7 @@
 
 - (NSString *)bookcaseView:(KZBookcaseView *)bookcaseView titleForSection:(NSInteger)section;
 {
-	return [NSString stringWithFormat:@"Year %d", 2010 + section];
+	return [NSString stringWithFormat:@"Year %d", 2000 + section];
 }
 
 #pragma mark -
