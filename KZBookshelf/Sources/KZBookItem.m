@@ -8,22 +8,23 @@
 
 #import "KZBookItem.h"
 
+
 //
 //	KZBookItem
 //
 
 @implementation KZBookItem
 
-+ (id)bookItemWithTitle:(NSString *)title coverImage:(UIImage *)image
++ (id)bookItemWithTitle:(NSString *)title image:(UIImage *)image
 {
-	return [[self alloc] initWithTitle:title coverImage:image];
+	return [[self alloc] initWithTitle:title image:image];
 }
 
-- (id)initWithTitle:(NSString *)title coverImage:(UIImage *)image;
+- (id)initWithTitle:(NSString *)title image:(UIImage *)image;
 {
 	if (self = [super init]) {
 		self.title = title;
-		self.coverImage = image;
+		self.image = image;
 	}
 	return self;
 }

@@ -16,10 +16,10 @@
 @interface KZBookItem : NSObject <KZBookcaseItem>
 
 @property (strong) NSString *title;
-@property (strong) UIImage *coverImage;
+@property (strong) UIImage *image;
 
-+ (id)bookItemWithTitle:(NSString *)title coverImage:(UIImage *)image;
++ (id)bookItemWithTitle:(NSString *)title image:(UIImage *)image;
 
-- (id)initWithTitle:(NSString *)title coverImage:(UIImage *)image;
+- (id)initWithTitle:(NSString *)title image:(UIImage *)image;
 
 @end

@@ -44,18 +44,18 @@
 	[super viewDidLoad];
 
 	self.bookItems = @[
-		[KZBookItem bookItemWithTitle:@"Janurary" coverImage:[UIImage imageNamed:@"yourmagazine.01.png"]],
-		[KZBookItem bookItemWithTitle:@"February" coverImage:[UIImage imageNamed:@"yourmagazine.02.png"]],
-		[KZBookItem bookItemWithTitle:@"March" coverImage:[UIImage imageNamed:@"yourmagazine.03.png"]],
-		[KZBookItem bookItemWithTitle:@"April" coverImage:[UIImage imageNamed:@"yourmagazine.04.png"]],
-		[KZBookItem bookItemWithTitle:@"May" coverImage:[UIImage imageNamed:@"yourmagazine.05.png"]],
-		[KZBookItem bookItemWithTitle:@"June" coverImage:[UIImage imageNamed:@"yourmagazine.06.png"]],
-		[KZBookItem bookItemWithTitle:@"July" coverImage:[UIImage imageNamed:@"yourmagazine.07.png"]],
-		[KZBookItem bookItemWithTitle:@"August" coverImage:[UIImage imageNamed:@"yourmagazine.08.png"]],
-		[KZBookItem bookItemWithTitle:@"September" coverImage:[UIImage imageNamed:@"yourmagazine.09.png"]],
-		[KZBookItem bookItemWithTitle:@"October" coverImage:[UIImage imageNamed:@"yourmagazine.10.png"]],
-		[KZBookItem bookItemWithTitle:@"November" coverImage:[UIImage imageNamed:@"yourmagazine.11.png"]],
-		[KZBookItem bookItemWithTitle:@"December" coverImage:[UIImage imageNamed:@"yourmagazine.12.png"]],
+		[KZBookItem bookItemWithTitle:@"Janurary" image:[UIImage imageNamed:@"yourmagazine.01.png"]],
+		[KZBookItem bookItemWithTitle:@"February" image:[UIImage imageNamed:@"yourmagazine.02.png"]],
+		[KZBookItem bookItemWithTitle:@"March" image:[UIImage imageNamed:@"yourmagazine.03.png"]],
+		[KZBookItem bookItemWithTitle:@"April" image:[UIImage imageNamed:@"yourmagazine.04.png"]],
+		[KZBookItem bookItemWithTitle:@"May" image:[UIImage imageNamed:@"yourmagazine.05.png"]],
+		[KZBookItem bookItemWithTitle:@"June" image:[UIImage imageNamed:@"yourmagazine.06.png"]],
+		[KZBookItem bookItemWithTitle:@"July" image:[UIImage imageNamed:@"yourmagazine.07.png"]],
+		[KZBookItem bookItemWithTitle:@"August" image:[UIImage imageNamed:@"yourmagazine.08.png"]],
+		[KZBookItem bookItemWithTitle:@"September" image:[UIImage imageNamed:@"yourmagazine.09.png"]],
+		[KZBookItem bookItemWithTitle:@"October" image:[UIImage imageNamed:@"yourmagazine.10.png"]],
+		[KZBookItem bookItemWithTitle:@"November" image:[UIImage imageNamed:@"yourmagazine.11.png"]],
+		[KZBookItem bookItemWithTitle:@"December" image:[UIImage imageNamed:@"yourmagazine.12.png"]],
 	];
 
 	NSParameterAssert(self.bookcaseView);
@@ -85,7 +85,7 @@
 {
 	KZBookItem *item = [self.bookItems objectAtIndex:indexPath.row];
 	KZBookItemCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:[KZBookItemCell kind] forIndexPath:indexPath];
-	cell.coverImage = item.coverImage;
+	cell.image = item.image;
 	return cell;
 
 }

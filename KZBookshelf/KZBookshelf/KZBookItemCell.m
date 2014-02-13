@@ -15,7 +15,7 @@
 
 @interface KZBookItemCell ()
 {
-	UIImage *_coverImage;
+	UIImage *_image;
 	UIImageView *_imageView;
 }
 @end
@@ -68,15 +68,15 @@
 
 #pragma mark -
 
-- (UIImage *)coverImage
+- (UIImage *)image
 {
-	return _coverImage;
+	return _image;
 }
 
-- (void)setCoverImage:(UIImage *)coverImage
+- (void)setImage:(UIImage *)image
 {
-	_coverImage = coverImage;
-	self.imageView.image = coverImage;
+	_image = image;
+	self.imageView.image = image;
 }
 
 /*

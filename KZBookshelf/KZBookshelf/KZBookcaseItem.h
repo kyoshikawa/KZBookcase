@@ -15,6 +15,6 @@
 @protocol KZBookcaseItem <NSObject>
 
 @property (readonly) NSString *title;
-@property (readonly) UIImage *coverImage;
+@property (readonly) UIImage *image;
 
 @end

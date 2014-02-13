@@ -167,10 +167,10 @@ enum {
 			NSIndexPath *indexPath = [NSIndexPath indexPathForItem:index inSection:section];
 			id <KZBookcaseItem> bookshelfItem = [bookcaseView.dataSource bookcaseView:bookcaseView bookcaseItemAtIndexPath:indexPath];
 
-			UIImage *coverImage = bookshelfItem.coverImage;
-			CGRect itemFrame = CGRectMake(x, y, coverImage.size.width, MIN(coverImage.size.height, self.rowHeight - (topMargin + bottomMargin)));
-			if (coverImage.size.height > self.rowHeight) {
-				itemFrame = CGRectMakeAspectFit_(coverImage.size, itemFrame);
+			UIImage *image = bookshelfItem.image;
+			CGRect itemFrame = CGRectMake(x, y, image.size.width, MIN(image.size.height, self.rowHeight - (topMargin + bottomMargin)));
+			if (image.size.height > self.rowHeight) {
+				itemFrame = CGRectMakeAspectFit_(image.size, itemFrame);
 			}
 
 			// if not enough space to place on the same shelf, get ready for the next shelf

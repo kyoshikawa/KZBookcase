@@ -17,7 +17,7 @@
 
 + (NSString *)kind;
 
-@property (strong) UIImage *coverImage;
+@property (strong) UIImage *image;
 @property (readonly) UIImageView *imageView;
 
 @end
