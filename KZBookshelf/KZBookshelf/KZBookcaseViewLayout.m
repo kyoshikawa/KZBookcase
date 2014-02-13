@@ -36,7 +36,7 @@ enum {
 
 @interface KZBookcaseViewLayout ()
 
-@property (weak) KZBookcaseView *bookcaseView;
+@property (readonly) KZBookcaseView *bookcaseView;
 @property (strong) NSArray *attributes;
 @property (strong) NSDictionary *sectionDictionary;
 @property (assign) CGFloat rowHeight;
@@ -57,11 +57,9 @@ enum {
 
 @implementation KZBookcaseViewLayout
 
-- (id)initWithBookcaseView:(KZBookcaseView *)bookcaseView
+- (id)initWithCoder:(NSCoder *)decoder
 {
-	NSParameterAssert(bookcaseView);
-	if (self = [super init]) {
-		self.bookcaseView = bookcaseView;
+	if (self = [super initWithCoder:decoder]) {
 		[self registerClass:[KZBookcaseRowView class] forDecorationViewOfKind:[KZBookcaseRowView kind]];
 		[self registerClass:[KZBookcaseShelfView class] forDecorationViewOfKind:[KZBookcaseShelfView kind]];
 	}
@@ -100,7 +98,7 @@ enum {
 {
 	[super prepareLayout];
 
-	KZBookcaseView *bookcaseView = self.bookcaseView;
+	KZBookcaseView *bookcaseView = (KZBookcaseView *)self.collectionView;
 
 	NSMutableDictionary *sectionDictionary = [NSMutableDictionary dictionary];
 	NSMutableDictionary *itemDictionary = [NSMutableDictionary dictionary];
@@ -109,8 +107,6 @@ enum {
 
 	CGFloat viewWidth = CGRectGetWidth(bookcaseView.bounds);
 	CGFloat viewHeight = CGRectGetHeight(bookcaseView.bounds);
-
-	id <KZBookcaseViewDataSource> dataSource = bookcaseView.dataSource;
 
 	UIImage *rowImage = [bookcaseView rowImageForWidth:CGRectGetWidth(bookcaseView.bounds)];
 	UIImage *shelfImage = [bookcaseView shelfImageForWidth:CGRectGetWidth(bookcaseView.bounds)];
@@ -169,7 +165,8 @@ enum {
 			// fit within our shelves.
 
 			NSIndexPath *indexPath = [NSIndexPath indexPathForItem:index inSection:section];
-			id <KZBookcaseItem> bookshelfItem = [dataSource bookcaseView:bookcaseView bookcaseItemAtIndexPath:indexPath];
+			id <KZBookcaseItem> bookshelfItem = [bookcaseView.dataSource bookcaseView:bookcaseView bookcaseItemAtIndexPath:indexPath];
+
 			UIImage *coverImage = bookshelfItem.coverImage;
 			CGRect itemFrame = CGRectMake(x, y, coverImage.size.width, MIN(coverImage.size.height, self.rowHeight - (topMargin + bottomMargin)));
 			if (coverImage.size.height > self.rowHeight) {
@@ -329,5 +326,10 @@ enum {
 	return (CGRectGetWidth(newBounds) != CGRectGetWidth(oldBounds));
 }
 
+- (KZBookcaseView *)bookcaseView
+{
+	NSParameterAssert([self.collectionView isKindOfClass:[KZBookcaseView class]]);
+	return (KZBookcaseView *)self.collectionView;
+}
 
 @end

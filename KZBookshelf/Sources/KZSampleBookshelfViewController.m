@@ -8,6 +8,9 @@
 
 #import "KZSampleBookshelfViewController.h"
 #import "KZBookItem.h"
+#import "KZBookItemCell.h"
+#import "KZBookcaseView.h"
+#import "KZBookcaseSectionView.h"
 
 
 //
@@ -54,6 +57,10 @@
 		[KZBookItem bookItemWithTitle:@"November" coverImage:[UIImage imageNamed:@"yourmagazine.11.png"]],
 		[KZBookItem bookItemWithTitle:@"December" coverImage:[UIImage imageNamed:@"yourmagazine.12.png"]],
 	];
+
+	NSParameterAssert(self.bookcaseView);
+	[self.bookcaseView registerClass:[KZBookItemCell class] forCellWithReuseIdentifier:[KZBookItemCell kind]];
+	[self.bookcaseView registerClass:[KZBookcaseSectionView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:[KZBookcaseSectionView kind]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -64,32 +71,53 @@
 
 #pragma mark -
 
-- (NSInteger)numberOfSectionsInBookcaseView:(KZBookcaseView *)bookshelfView
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-	return 13;
+	return 21;
 }
 
-- (NSInteger)bookcaseView:(KZBookcaseView *)bookshelfView numberOfItemsInSection:(NSInteger)section
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
 	return self.bookItems.count;
 }
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+	KZBookItem *item = [self.bookItems objectAtIndex:indexPath.row];
+	KZBookItemCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:[KZBookItemCell kind] forIndexPath:indexPath];
+	cell.coverImage = item.coverImage;
+	return cell;
+
+}
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+{
+	if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
+		KZBookcaseSectionView *view = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:[KZBookcaseSectionView kind] forIndexPath:indexPath];
+		NSString *title = [self titleForSection:indexPath.section];
+		view.textLabel.text = title ;
+		return view;
+	}
+	return nil;
+}
+
+#pragma mark -
 
 - (id <KZBookcaseItem>)bookcaseView:(KZBookcaseView *)bookcaseView bookcaseItemAtIndexPath:(NSIndexPath *)indexPath
 {
 	return [self.bookItems objectAtIndex:indexPath.row];
 }
 
-- (NSString *)bookcaseView:(KZBookcaseView *)bookcaseView titleForSection:(NSInteger)section;
+- (NSString *)titleForSection:(NSInteger)section;
 {
 	return [NSString stringWithFormat:@"Year %d", 2000 + section];
 }
 
 #pragma mark -
 
-- (void)bookcaseView:(KZBookcaseView *)bookcaseView didSelectAtIndexPath:(NSIndexPath *)indexPath;
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-	id <KZBookcaseItem> item = [self bookcaseView:bookcaseView bookcaseItemAtIndexPath:indexPath];
-
+	KZBookItem *item = [self.bookItems objectAtIndex:indexPath.row];
 	[[[UIAlertView alloc] initWithTitle:@"Item" message:[item title] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
 }
 

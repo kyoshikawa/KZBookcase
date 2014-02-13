@@ -2,12 +2,12 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment defaultVersion="1552" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="4514"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KZSampleBookshelfViewController">
             <connections>
-                <outlet property="bookshelfView" destination="TWk-23-U9q" id="3fp-bh-RfS"/>
+                <outlet property="bookcaseView" destination="7co-HL-TWr" id="7fv-Fu-3Vp"/>
                 <outlet property="view" destination="1" id="9F5-2i-Zxq"/>
             </connections>
         </placeholder>
@@ -16,22 +16,28 @@
             <rect key="frame" x="0.0" y="64" width="320" height="504"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TWk-23-U9q" customClass="KZBookcaseView">
+                <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="7co-HL-TWr" customClass="KZBookcaseView">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0vR-g0-uhM" customClass="KZBookcaseViewLayout">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <cells/>
                     <connections>
-                        <outlet property="dataSource" destination="-1" id="5VG-Bi-cGi"/>
-                        <outlet property="delegate" destination="-1" id="vIx-6W-fIA"/>
+                        <outlet property="dataSource" destination="-1" id="gcn-nB-eN9"/>
+                        <outlet property="delegate" destination="-1" id="73I-0f-qT9"/>
                     </connections>
-                </view>
+                </collectionView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="TWk-23-U9q" secondAttribute="trailing" id="BS3-Dm-ggq"/>
-                <constraint firstItem="TWk-23-U9q" firstAttribute="top" secondItem="1" secondAttribute="top" id="TbE-oy-Wfc"/>
-                <constraint firstItem="TWk-23-U9q" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="VyO-xE-lsD"/>
-                <constraint firstAttribute="bottom" secondItem="TWk-23-U9q" secondAttribute="bottom" id="oeO-bU-2gH"/>
+                <constraint firstItem="7co-HL-TWr" firstAttribute="top" secondItem="1" secondAttribute="top" id="2CW-nu-cLG"/>
+                <constraint firstItem="7co-HL-TWr" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="ea6-EJ-rMg"/>
+                <constraint firstAttribute="trailing" secondItem="7co-HL-TWr" secondAttribute="trailing" id="ga3-g9-qvz"/>
+                <constraint firstAttribute="bottom" secondItem="7co-HL-TWr" secondAttribute="bottom" id="sGL-mw-j6q"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>

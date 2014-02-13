@@ -15,32 +15,25 @@
 //	KZBookcaseViewDataSource
 //
 
-@protocol KZBookcaseViewDataSource <NSObject>
+@protocol KZBookcaseViewDataSource <UICollectionViewDataSource>
 
-- (NSInteger)numberOfSectionsInBookcaseView:(KZBookcaseView *)bookcaseView;
-- (NSInteger)bookcaseView:(KZBookcaseView *)bookcaseView numberOfItemsInSection:(NSInteger)section;
 - (id <KZBookcaseItem>)bookcaseView:(KZBookcaseView *)bookcaseView bookcaseItemAtIndexPath:(NSIndexPath *)indexPath;
-- (NSString *)bookcaseView:(KZBookcaseView *)bookcaseView titleForSection:(NSInteger)section;
 
 @end
-
 
 //
 //	KZBookcaseViewDelegate
 //
 
-@protocol KZBookcaseViewDelegate <NSObject>
-
-- (void)bookcaseView:(KZBookcaseView *)bookcaseView didSelectAtIndexPath:(NSIndexPath *)indexPath;
+@protocol KZBookcaseViewDelegate <UICollectionViewDelegate>
 
 @end
-
 
 //
 //	KZBookcaseView
 //
 
-@interface KZBookcaseView : UIView
+@interface KZBookcaseView : UICollectionView
 
 @property (weak, nonatomic) IBOutlet id <KZBookcaseViewDataSource> dataSource;
 @property (weak, nonatomic) IBOutlet id <KZBookcaseViewDelegate> delegate;

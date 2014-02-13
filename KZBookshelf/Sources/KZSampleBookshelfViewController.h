@@ -16,6 +16,6 @@
 
 @interface KZSampleBookshelfViewController : UIViewController <KZBookcaseViewDataSource, KZBookcaseViewDelegate>
 
-@property (strong) IBOutlet KZBookcaseView *bookshelfView;
+@property (strong) IBOutlet KZBookcaseView *bookcaseView;
 
 @end

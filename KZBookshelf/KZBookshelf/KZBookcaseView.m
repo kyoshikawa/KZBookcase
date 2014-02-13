@@ -17,9 +17,8 @@
 //	KZBookcaseView ()
 //
 
-@interface KZBookcaseView () <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface KZBookcaseView ()
 {
-	UICollectionView *_collectionView;
 	NSString *_baseImageName;
 }
 
@@ -37,8 +36,6 @@
 
 - (void)setupBookcaseView
 {
-	[self.collectionView registerClass:[KZBookItemCell class] forCellWithReuseIdentifier:[KZBookItemCell kind]];
-	[self.collectionView registerClass:[KZBookcaseSectionView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:[KZBookcaseSectionView kind]];
 }
 
 - (id)initWithCoder:(NSCoder *)decoder
@@ -55,20 +52,6 @@
 		[self setupBookcaseView];
 	}
 	return self;
-}
-
-- (UICollectionView *)collectionView
-{
-	if (!_collectionView) {
-		KZBookcaseViewLayout *layout = [[KZBookcaseViewLayout alloc] initWithBookcaseView:self];
-		_collectionView = [[UICollectionView alloc] initWithFrame:self.bounds collectionViewLayout:layout];
-		_collectionView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-		_collectionView.backgroundColor = self.backgroundColor;
-		_collectionView.dataSource = self;
-		_collectionView.delegate = self;
-		[self addSubview:_collectionView];
-	}
-	return _collectionView;
 }
 
 - (void)layoutSubviews
@@ -119,40 +102,6 @@
 
 #pragma mark -
 
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
-{
-	return [self.dataSource numberOfSectionsInBookcaseView:self];
-}
-
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
-{
-	return [self.dataSource bookcaseView:self numberOfItemsInSection:section];
-}
-
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
-{
-	id <KZBookcaseItem> item = [self.dataSource bookcaseView:self bookcaseItemAtIndexPath:indexPath];
-	KZBookItemCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:[KZBookItemCell kind] forIndexPath:indexPath];
-	cell.coverImage = item.coverImage;
-	return cell;
-
-}
-
-- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
-{
-	KZBookcaseSectionView *view = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:[KZBookcaseSectionView kind] forIndexPath:indexPath];
-	NSString *title = [self.dataSource bookcaseView:self titleForSection:indexPath.section];
-	view.textLabel.text = title ;
-	return view;
-}
-
-
-#pragma mark -
-
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-{
-	[self.delegate bookcaseView:self didSelectAtIndexPath:indexPath];
-}
 
 
 @end

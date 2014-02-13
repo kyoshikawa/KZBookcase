@@ -16,6 +16,4 @@
 
 @interface KZBookcaseViewLayout : UICollectionViewFlowLayout
 
-- (id)initWithBookcaseView:(KZBookcaseView *)bookcaseView;
-
 @end
