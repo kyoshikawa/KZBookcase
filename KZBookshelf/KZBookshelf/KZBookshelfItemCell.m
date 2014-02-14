@@ -1,19 +1,19 @@
 //
-//	KZBookItemCell.m
+//	KZBookshelfItemCell.m
 //	KZBookshelf
 //
 //	Created by Kaz Yoshikawa on 14/2/2.
 //	Copyright (c) 2014 Digital Lynx. All rights reserved.
 //
 
-#import "KZBookItemCell.h"
+#import "KZBookshelfItemCell.h"
 
 
 //
-//	KZBookItemCell ()
+//	KZBookshelfItemCell ()
 //
 
-@interface KZBookItemCell ()
+@interface KZBookshelfItemCell ()
 {
 	UIImage *_image;
 	UIImageView *_imageView;
@@ -22,10 +22,10 @@
 
 
 //
-//	KZBookItemCell
+//	KZBookshelfItemCell
 //
 
-@implementation KZBookItemCell
+@implementation KZBookshelfItemCell
 
 + (NSString *)kind
 {
@@ -64,6 +64,8 @@
 	self.layer.shadowOffset = CGSizeMake(2, -2);
 	self.layer.shadowOpacity = 0.5;
 	self.layer.shadowRadius = 3.0f;
+
+	self.imageView.image = _image;
 }
 
 #pragma mark -

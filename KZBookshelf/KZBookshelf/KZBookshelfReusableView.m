@@ -1,20 +1,20 @@
 //
-//	KZBookcaseReusableView.m
+//	KZBookshelfReusableView.m
 //	KZBookshelf
 //
 //	Created by Kaz Yoshikawa on 14/2/3.
 //	Copyright (c) 2014 Digital Lynx. All rights reserved.
 //
 
-#import "KZBookcaseReusableView.h"
-#import "KZBookcaseView.h"
+#import "KZBookshelfReusableView.h"
+#import "KZBookshelfView.h"
 
 
 //
-//	KZBookcaseReusableView ()
+//	KZBookshelfReusableView ()
 //
 
-@interface KZBookcaseReusableView ()
+@interface KZBookshelfReusableView ()
 {
 	UIImage *_image;
 	UIImageView *_imageView;
@@ -25,10 +25,10 @@
 
 
 //
-//	KZBookcaseReusableView
+//	KZBookshelfReusableView
 //
 
-@implementation KZBookcaseReusableView
+@implementation KZBookshelfReusableView
 
 + (NSString *)kind
 {
@@ -45,14 +45,14 @@
 
 #pragma mark -
 
-- (KZBookcaseView *)bookcasefView
+- (KZBookshelfView *)bookshelffView
 {
 	UIView *view = self;
 	do {
 		view = view.superview;
-	} while (view && ![view isKindOfClass:[KZBookcaseView class]]);
+	} while (view && ![view isKindOfClass:[KZBookshelfView class]]);
 
-	return (KZBookcaseView *)view;
+	return (KZBookshelfView *)view;
 }
 
 - (UIImageView *)imageView

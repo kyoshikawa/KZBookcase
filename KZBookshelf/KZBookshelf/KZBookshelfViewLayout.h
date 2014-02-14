@@ -1,5 +1,5 @@
 //
-//  KZBookcaseRowView.h
+//  KZBookshelfViewLayout.h
 //  KZBookshelf
 //
 //  Created by Kaz Yoshikawa on 14/2/2.
@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "KZBookcaseReusableView.h"
+@class KZBookshelfView;
 
 
 //
-//	KZBookcaseRowView
+//	KZBookshelfViewLayout
 //
 
-@interface KZBookcaseRowView : KZBookcaseReusableView
+@interface KZBookshelfViewLayout : UICollectionViewFlowLayout
 
 @end

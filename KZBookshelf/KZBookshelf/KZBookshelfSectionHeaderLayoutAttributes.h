@@ -1,5 +1,5 @@
 //
-//  KZBookcaseSectionLayoutAttributes.h
+//  KZBookshelfSectionLayoutAttributes.h
 //  KZBookshelf
 //
 //  Created by Kaz Yoshikawa on 14/2/4.
@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 
 //
-//	KZBookcaseSectionLayoutAttributes
+//	KZBookshelfSectionLayoutAttributes
 //
 
-@interface KZBookcaseSectionLayoutAttributes : UICollectionViewLayoutAttributes
+@interface KZBookshelfSectionHeaderLayoutAttributes : UICollectionViewLayoutAttributes
 
 @property (strong) UIFont *font;
 @property (strong) UIColor *textColor;

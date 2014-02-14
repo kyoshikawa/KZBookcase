@@ -7,15 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "KZBookcaseView.h"
+#import "KZBookshelfView.h"
 
 
 //
 //	KZSampleBookshelfViewController
 //
 
-@interface KZSampleBookshelfViewController : UIViewController <KZBookcaseViewDataSource, KZBookcaseViewDelegate>
+@interface KZSampleBookshelfViewController : UIViewController <KZBookshelfViewDataSource, KZBookshelfViewDelegate>
 
-@property (strong) IBOutlet KZBookcaseView *bookcaseView;
+@property (strong) IBOutlet KZBookshelfView *bookshelfView;
 
 @end

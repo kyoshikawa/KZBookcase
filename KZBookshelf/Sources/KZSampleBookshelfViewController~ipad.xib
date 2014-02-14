@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KZSampleBookshelfViewController">
             <connections>
-                <outlet property="bookcaseView" destination="ycl-Cg-JSg" id="6JH-rV-HK1"/>
+                <outlet property="bookshelfView" destination="ycl-Cg-JSg" id="S4R-1s-NTJ"/>
                 <outlet property="view" destination="1" id="CVq-Y4-UgT"/>
             </connections>
         </placeholder>
@@ -16,10 +16,10 @@
             <rect key="frame" x="0.0" y="64" width="768" height="960"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ycl-Cg-JSg" customClass="KZBookcaseView">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ycl-Cg-JSg" customClass="KZBookshelfView">
                     <rect key="frame" x="0.0" y="0.0" width="768" height="960"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="piX-Km-PeI" customClass="KZBookcaseViewLayout">
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="piX-Km-PeI" customClass="KZBookshelfViewLayout">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>

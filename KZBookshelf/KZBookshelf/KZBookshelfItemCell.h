@@ -1,5 +1,5 @@
 //
-//  KZBookItemCell.h
+//  KZBookshelfItemCell.h
 //  KZBookshelf
 //
 //  Created by Kaz Yoshikawa on 14/2/2.
@@ -10,10 +10,10 @@
 
 
 //
-//	KZBookItemCell
+//	KZBookshelfItemCell
 //
 
-@interface KZBookItemCell : UICollectionViewCell
+@interface KZBookshelfItemCell : UICollectionViewCell
 
 + (NSString *)kind;
 

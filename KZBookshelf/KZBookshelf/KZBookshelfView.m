@@ -1,23 +1,23 @@
 //
-//	KZBookcaseView.m
+//	KZBookshelfView.m
 //	KZBookshelf
 //
 //	Created by Kaz Yoshikawa on 14/2/2.
 //	Copyright (c) 2014 Digital Lynx. All rights reserved.
 //
 
-#import "KZBookcaseView.h"
-#import "KZBookcaseViewLayout.h"
-#import "KZBookItemCell.h"
-#import "KZBookcaseRowView.h"
-#import "KZBookcaseSectionView.h"
+#import "KZBookshelfView.h"
+#import "KZBookshelfViewLayout.h"
+#import "KZBookshelfItemCell.h"
+#import "KZBookshelfRowView.h"
+#import "KZBookshelfSectionView.h"
 
 
 //
-//	KZBookcaseView ()
+//	KZBookshelfView ()
 //
 
-@interface KZBookcaseView ()
+@interface KZBookshelfView ()
 {
 	NSString *_baseImageName;
 }
@@ -29,19 +29,19 @@
 
 
 //
-//	KZBookcaseView
+//	KZBookshelfView
 //
 
-@implementation KZBookcaseView
+@implementation KZBookshelfView
 
-- (void)setupBookcaseView
+- (void)setupBookshelfView
 {
 }
 
 - (id)initWithCoder:(NSCoder *)decoder
 {
 	if (self = [super initWithCoder:decoder]) {
-		[self setupBookcaseView];
+		[self setupBookshelfView];
 	}
 	return self;
 }
@@ -49,7 +49,7 @@
 - (id)initWithFrame:(CGRect)frame
 {
 	if (self = [super initWithFrame:frame]) {
-		[self setupBookcaseView];
+		[self setupBookshelfView];
 	}
 	return self;
 }
@@ -64,7 +64,7 @@
 
 - (NSString *)baseImageName
 {
-	return _baseImageName ? _baseImageName : @"Bookcase";
+	return _baseImageName ? _baseImageName : @"Bookshelf";
 }
 
 - (void)setBaseImageName:(NSString *)baseImageName
@@ -74,16 +74,16 @@
 
 #pragma mark -
 
-- (UIImage *)rowImageForWidth:(CGFloat)width
+- (UIImage *)bodyImageForWidth:(CGFloat)width
 {
-	NSString *name = [NSString stringWithFormat:@"%@-Row-%d", self.baseImageName, (int)width];
+	NSString *name = [NSString stringWithFormat:@"%@-Body-%d", self.baseImageName, (int)width];
 	UIImage *image = [UIImage imageNamed:name];
 	return image;
 }
 
-- (UIImage *)shelfImageForWidth:(CGFloat)width
+- (UIImage *)bottomImageForWidth:(CGFloat)width
 {
-	NSString *name = [NSString stringWithFormat:@"%@-Shelf-%d", self.baseImageName, (int)width];
+	NSString *name = [NSString stringWithFormat:@"%@-Bottom-%d", self.baseImageName, (int)width];
 	UIImage *image = [UIImage imageNamed:name];
 	return image;
 }

@@ -7,10 +7,10 @@
 //
 
 #import "KZSampleBookshelfViewController.h"
-#import "KZBookItem.h"
-#import "KZBookItemCell.h"
-#import "KZBookcaseView.h"
-#import "KZBookcaseSectionView.h"
+#import "KZBookshelfItem.h"
+#import "KZBookshelfItemCell.h"
+#import "KZBookshelfView.h"
+#import "KZBookshelfSectionView.h"
 
 
 //
@@ -44,23 +44,23 @@
 	[super viewDidLoad];
 
 	self.bookItems = @[
-		[KZBookItem bookItemWithTitle:@"Janurary" image:[UIImage imageNamed:@"yourmagazine.01.png"]],
-		[KZBookItem bookItemWithTitle:@"February" image:[UIImage imageNamed:@"yourmagazine.02.png"]],
-		[KZBookItem bookItemWithTitle:@"March" image:[UIImage imageNamed:@"yourmagazine.03.png"]],
-		[KZBookItem bookItemWithTitle:@"April" image:[UIImage imageNamed:@"yourmagazine.04.png"]],
-		[KZBookItem bookItemWithTitle:@"May" image:[UIImage imageNamed:@"yourmagazine.05.png"]],
-		[KZBookItem bookItemWithTitle:@"June" image:[UIImage imageNamed:@"yourmagazine.06.png"]],
-		[KZBookItem bookItemWithTitle:@"July" image:[UIImage imageNamed:@"yourmagazine.07.png"]],
-		[KZBookItem bookItemWithTitle:@"August" image:[UIImage imageNamed:@"yourmagazine.08.png"]],
-		[KZBookItem bookItemWithTitle:@"September" image:[UIImage imageNamed:@"yourmagazine.09.png"]],
-		[KZBookItem bookItemWithTitle:@"October" image:[UIImage imageNamed:@"yourmagazine.10.png"]],
-		[KZBookItem bookItemWithTitle:@"November" image:[UIImage imageNamed:@"yourmagazine.11.png"]],
-		[KZBookItem bookItemWithTitle:@"December" image:[UIImage imageNamed:@"yourmagazine.12.png"]],
+		[KZBookshelfItem bookshelfItemWithTitle:@"Janurary" image:[UIImage imageNamed:@"yourmagazine.01.png"]],
+		[KZBookshelfItem bookshelfItemWithTitle:@"February" image:[UIImage imageNamed:@"yourmagazine.02.png"]],
+		[KZBookshelfItem bookshelfItemWithTitle:@"March" image:[UIImage imageNamed:@"yourmagazine.03.png"]],
+		[KZBookshelfItem bookshelfItemWithTitle:@"April" image:[UIImage imageNamed:@"yourmagazine.04.png"]],
+		[KZBookshelfItem bookshelfItemWithTitle:@"May" image:[UIImage imageNamed:@"yourmagazine.05.png"]],
+		[KZBookshelfItem bookshelfItemWithTitle:@"June" image:[UIImage imageNamed:@"yourmagazine.06.png"]],
+		[KZBookshelfItem bookshelfItemWithTitle:@"July" image:[UIImage imageNamed:@"yourmagazine.07.png"]],
+		[KZBookshelfItem bookshelfItemWithTitle:@"August" image:[UIImage imageNamed:@"yourmagazine.08.png"]],
+		[KZBookshelfItem bookshelfItemWithTitle:@"September" image:[UIImage imageNamed:@"yourmagazine.09.png"]],
+		[KZBookshelfItem bookshelfItemWithTitle:@"October" image:[UIImage imageNamed:@"yourmagazine.10.png"]],
+		[KZBookshelfItem bookshelfItemWithTitle:@"November" image:[UIImage imageNamed:@"yourmagazine.11.png"]],
+		[KZBookshelfItem bookshelfItemWithTitle:@"December" image:[UIImage imageNamed:@"yourmagazine.12.png"]],
 	];
 
-	NSParameterAssert(self.bookcaseView);
-	[self.bookcaseView registerClass:[KZBookItemCell class] forCellWithReuseIdentifier:[KZBookItemCell kind]];
-	[self.bookcaseView registerClass:[KZBookcaseSectionView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:[KZBookcaseSectionView kind]];
+	NSParameterAssert(self.bookshelfView);
+	[self.bookshelfView registerClass:[KZBookshelfItemCell class] forCellWithReuseIdentifier:[KZBookshelfItemCell kind]];
+	[self.bookshelfView registerClass:[KZBookshelfSectionView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:[KZBookshelfSectionView kind]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -83,8 +83,8 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-	KZBookItem *item = [self.bookItems objectAtIndex:indexPath.row];
-	KZBookItemCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:[KZBookItemCell kind] forIndexPath:indexPath];
+	KZBookshelfItem *item = [self.bookItems objectAtIndex:indexPath.row];
+	KZBookshelfItemCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:[KZBookshelfItemCell kind] forIndexPath:indexPath];
 	cell.image = item.image;
 	return cell;
 
@@ -93,7 +93,7 @@
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
 	if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
-		KZBookcaseSectionView *view = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:[KZBookcaseSectionView kind] forIndexPath:indexPath];
+		KZBookshelfSectionView *view = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:[KZBookshelfSectionView kind] forIndexPath:indexPath];
 		NSString *title = [self titleForSection:indexPath.section];
 		view.textLabel.text = title ;
 		return view;
@@ -103,7 +103,7 @@
 
 #pragma mark -
 
-- (id <KZBookcaseItem>)bookcaseView:(KZBookcaseView *)bookcaseView bookcaseItemAtIndexPath:(NSIndexPath *)indexPath
+- (id <KZBookshelfItem>)bookshelfView:(KZBookshelfView *)bookshelfView bookshelfItemAtIndexPath:(NSIndexPath *)indexPath
 {
 	return [self.bookItems objectAtIndex:indexPath.row];
 }
@@ -117,7 +117,7 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-	KZBookItem *item = [self.bookItems objectAtIndex:indexPath.row];
+	KZBookshelfItem *item = [self.bookItems objectAtIndex:indexPath.row];
 	[[[UIAlertView alloc] initWithTitle:@"Item" message:[item title] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
 }
 

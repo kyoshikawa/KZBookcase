@@ -1,5 +1,5 @@
 //
-//  KZBookcaseReusableView.h
+//  KZBookshelfReusableView.h
 //  KZBookshelf
 //
 //  Created by Kaz Yoshikawa on 14/2/3.
@@ -7,18 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
-@class KZBookcaseView;
+@class KZBookshelfView;
 
 
 //
-//	KZBookcaseReusableView
+//	KZBookshelfReusableView
 //
 
-@interface KZBookcaseReusableView : UICollectionReusableView
+@interface KZBookshelfReusableView : UICollectionReusableView
 
 + (NSString *)kind;
 
 @property (strong) UIImage *image;
-@property (readonly) KZBookcaseView *bookcasefView;
+@property (readonly) KZBookshelfView *bookshelffView;
 
 @end

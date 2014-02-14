@@ -1,18 +1,18 @@
 //
-//	KZBookcaseViewLayout.m
+//	KZBookshelfViewLayout.m
 //	KZBookshelf
 //
 //	Created by Kaz Yoshikawa on 14/2/2.
 //	Copyright (c) 2014 Digital Lynx. All rights reserved.
 //
 
-#import "KZBookcaseViewLayout.h"
-#import "KZBookcaseView.h"
-#import "KZBookcaseItem.h"
-#import "KZBookcaseRowView.h"
-#import "KZBookcaseShelfView.h"
-#import "KZBookcaseSectionView.h"
-#import "KZBookcaseSectionLayoutAttributes.h"
+#import "KZBookshelfViewLayout.h"
+#import "KZBookshelfView.h"
+#import "KZBookshelfItem.h"
+#import "KZBookshelfRowView.h"
+#import "KZBookshelfShelfView.h"
+#import "KZBookshelfSectionView.h"
+#import "KZBookshelfSectionHeaderLayoutAttributes.h"
 #import "ZGeometricUtils.h"
 
 
@@ -31,12 +31,12 @@ enum {
 
 
 //
-//	KZBookcaseViewLayout ()
+//	KZBookshelfViewLayout ()
 //
 
-@interface KZBookcaseViewLayout ()
+@interface KZBookshelfViewLayout ()
 
-@property (readonly) KZBookcaseView *bookcaseView;
+@property (readonly) KZBookshelfView *bookshelfView;
 @property (strong) NSArray *attributes;
 @property (strong) NSDictionary *sectionDictionary;
 @property (assign) CGFloat rowHeight;
@@ -52,16 +52,16 @@ enum {
 
 
 //
-//	KZBookcaseViewLayout
+//	KZBookshelfViewLayout
 //
 
-@implementation KZBookcaseViewLayout
+@implementation KZBookshelfViewLayout
 
 - (id)initWithCoder:(NSCoder *)decoder
 {
 	if (self = [super initWithCoder:decoder]) {
-		[self registerClass:[KZBookcaseRowView class] forDecorationViewOfKind:[KZBookcaseRowView kind]];
-		[self registerClass:[KZBookcaseShelfView class] forDecorationViewOfKind:[KZBookcaseShelfView kind]];
+		[self registerClass:[KZBookshelfRowView class] forDecorationViewOfKind:[KZBookshelfRowView kind]];
+		[self registerClass:[KZBookshelfShelfView class] forDecorationViewOfKind:[KZBookshelfShelfView kind]];
 	}
 	return self;
 }
@@ -75,21 +75,21 @@ enum {
 
 - (UICollectionViewLayoutAttributes *)layoutAttributesForSectionWithIndexPath:(NSIndexPath *)indexPath
 {
-	KZBookcaseSectionLayoutAttributes *attributes = [KZBookcaseSectionLayoutAttributes layoutAttributesForSupplementaryViewOfKind:UICollectionElementKindSectionHeader withIndexPath:indexPath];
+	KZBookshelfSectionHeaderLayoutAttributes *attributes = [KZBookshelfSectionHeaderLayoutAttributes layoutAttributesForSupplementaryViewOfKind:UICollectionElementKindSectionHeader withIndexPath:indexPath];
 	attributes.zIndex = -1;
 	return attributes;
 }
 
 - (UICollectionViewLayoutAttributes *)layoutAttributesForRowWithIndexPath:(NSIndexPath *)indexPath
 {
-	UICollectionViewLayoutAttributes *attributes = [UICollectionViewLayoutAttributes layoutAttributesForDecorationViewOfKind:[KZBookcaseRowView kind] withIndexPath:indexPath];
+	UICollectionViewLayoutAttributes *attributes = [UICollectionViewLayoutAttributes layoutAttributesForDecorationViewOfKind:[KZBookshelfRowView kind] withIndexPath:indexPath];
 	attributes.zIndex = -1;
 	return attributes;
 }
 
 - (UICollectionViewLayoutAttributes *)layoutAttributesForShelfWithIndexPath:(NSIndexPath *)indexPath
 {
-	UICollectionViewLayoutAttributes *attributes = [UICollectionViewLayoutAttributes layoutAttributesForDecorationViewOfKind:[KZBookcaseShelfView kind] withIndexPath:indexPath];
+	UICollectionViewLayoutAttributes *attributes = [UICollectionViewLayoutAttributes layoutAttributesForDecorationViewOfKind:[KZBookshelfShelfView kind] withIndexPath:indexPath];
 	attributes.zIndex = -1;
 	return attributes;
 }
@@ -98,19 +98,19 @@ enum {
 {
 	[super prepareLayout];
 
-	KZBookcaseView *bookcaseView = (KZBookcaseView *)self.collectionView;
+	KZBookshelfView *bookshelfView = (KZBookshelfView *)self.collectionView;
 
 	NSMutableDictionary *sectionDictionary = [NSMutableDictionary dictionary];
 	NSMutableDictionary *itemDictionary = [NSMutableDictionary dictionary];
 	NSMutableDictionary *supplementaryDictionary = [NSMutableDictionary dictionary];
 	NSMutableDictionary *decorationDictionary = [NSMutableDictionary dictionary];
 
-	CGFloat viewWidth = CGRectGetWidth(bookcaseView.bounds);
-	CGFloat viewHeight = CGRectGetHeight(bookcaseView.bounds);
+	CGFloat viewWidth = CGRectGetWidth(bookshelfView.bounds);
+	CGFloat viewHeight = CGRectGetHeight(bookshelfView.bounds);
 
-	UIImage *rowImage = [bookcaseView rowImageForWidth:CGRectGetWidth(bookcaseView.bounds)];
-	UIImage *shelfImage = [bookcaseView shelfImageForWidth:CGRectGetWidth(bookcaseView.bounds)];
-	UIImage *sectionImage = [bookcaseView sectionImageForWidth:CGRectGetWidth(bookcaseView.bounds)];
+	UIImage *rowImage = [bookshelfView bodyImageForWidth:CGRectGetWidth(bookshelfView.bounds)];
+	UIImage *shelfImage = [bookshelfView bottomImageForWidth:CGRectGetWidth(bookshelfView.bounds)];
+	UIImage *sectionImage = [bookshelfView sectionImageForWidth:CGRectGetWidth(bookshelfView.bounds)];
 	NSParameterAssert(rowImage);
 	NSParameterAssert(shelfImage);
 
@@ -165,7 +165,7 @@ enum {
 			// fit within our shelves.
 
 			NSIndexPath *indexPath = [NSIndexPath indexPathForItem:index inSection:section];
-			id <KZBookcaseItem> bookshelfItem = [bookcaseView.dataSource bookcaseView:bookcaseView bookcaseItemAtIndexPath:indexPath];
+			id <KZBookshelfItem> bookshelfItem = [bookshelfView.dataSource bookshelfView:bookshelfView bookshelfItemAtIndexPath:indexPath];
 
 			UIImage *image = bookshelfItem.image;
 			CGRect itemFrame = CGRectMake(x, y, image.size.width, MIN(image.size.height, self.rowHeight - (topMargin + bottomMargin)));
@@ -326,10 +326,10 @@ enum {
 	return (CGRectGetWidth(newBounds) != CGRectGetWidth(oldBounds));
 }
 
-- (KZBookcaseView *)bookcaseView
+- (KZBookshelfView *)bookshelfView
 {
-	NSParameterAssert([self.collectionView isKindOfClass:[KZBookcaseView class]]);
-	return (KZBookcaseView *)self.collectionView;
+	NSParameterAssert([self.collectionView isKindOfClass:[KZBookshelfView class]]);
+	return (KZBookshelfView *)self.collectionView;
 }
 
 @end

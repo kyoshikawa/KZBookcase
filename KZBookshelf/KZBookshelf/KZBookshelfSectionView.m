@@ -1,21 +1,21 @@
 //
-//	KZBookcaseSectionView.m
+//	KZBookshelfSectionView.m
 //	KZBookshelf
 //
 //	Created by Kaz Yoshikawa on 14/2/3.
 //	Copyright (c) 2014 Electricwoods LLC. All rights reserved.
 //
 
-#import "KZBookcaseSectionView.h"
-#import "KZBookcaseView.h"
-#import "KZBookcaseSectionLayoutAttributes.h"
+#import "KZBookshelfSectionView.h"
+#import "KZBookshelfView.h"
+#import "KZBookshelfSectionHeaderLayoutAttributes.h"
 
 
 //
-//	KZBookcaseSectionView ()
+//	KZBookshelfSectionView ()
 //
 
-@interface KZBookcaseSectionView ()
+@interface KZBookshelfSectionView ()
 {
 	UILabel *_textLabel;
 }
@@ -24,10 +24,10 @@
 
 
 //
-//	KZBookcaseSectionView
+//	KZBookshelfSectionView
 //
 
-@implementation KZBookcaseSectionView
+@implementation KZBookshelfSectionView
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -40,15 +40,15 @@
 {
 	[super layoutSubviews];
 
-	self.image = [self.bookcasefView shelfImageForWidth:CGRectGetWidth(self.bounds)];
+	self.image = [self.bookshelffView bottomImageForWidth:CGRectGetWidth(self.bounds)];
 }
 
 - (void)applyLayoutAttributes:(UICollectionViewLayoutAttributes *)layoutAttributes
 {
 	[super applyLayoutAttributes:layoutAttributes];
 
-	if ([layoutAttributes isKindOfClass:[KZBookcaseSectionLayoutAttributes class]]) {
-		KZBookcaseSectionLayoutAttributes *attributes = (KZBookcaseSectionLayoutAttributes *)layoutAttributes;
+	if ([layoutAttributes isKindOfClass:[KZBookshelfSectionHeaderLayoutAttributes class]]) {
+		KZBookshelfSectionHeaderLayoutAttributes *attributes = (KZBookshelfSectionHeaderLayoutAttributes *)layoutAttributes;
 		if (self.textLabel && attributes) {
 			if (attributes.textColor) self.textLabel.textColor = attributes.textColor;
 			if (attributes.font) self.textLabel.font = attributes.font;
