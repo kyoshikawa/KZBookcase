@@ -43,6 +43,4 @@
 - (UIImage *)shelfImageForWidth:(CGFloat)width;
 - (UIImage *)sectionImageForWidth:(CGFloat)width;
 
-- (void)reloadData;
-
 @end

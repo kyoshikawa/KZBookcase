@@ -62,11 +62,6 @@
 	[self.collectionView reloadData];
 }
 
-- (void)reloadData;
-{
-	[self.collectionView reloadData];
-}
-
 - (NSString *)baseImageName
 {
 	return _baseImageName ? _baseImageName : @"Bookcase";
