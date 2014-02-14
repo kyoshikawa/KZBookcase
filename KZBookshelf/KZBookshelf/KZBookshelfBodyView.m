@@ -1,30 +1,35 @@
 //
-//	KZBookshelfShelfView.m
+//	KZBookshelfBodyView.m
 //	KZBookshelf
 //
-//	Created by Kaz Yoshikawa on 14/2/3.
+//	Created by Kaz Yoshikawa on 14/2/2.
 //	Copyright (c) 2014 Digital Lynx. All rights reserved.
 //
 
-#import "KZBookshelfShelfView.h"
+#import "KZBookshelfBodyView.h"
 #import "KZBookshelfView.h"
+#import "UIView+Debug.h"
 
 
 //
-//	@interface KZBookshelfShelfView ()
+//	KZBookshelfBodyView ()
 //
 
-@interface KZBookshelfShelfView ()
+@interface KZBookshelfBodyView ()
 
 @end
 
 
 //
-//	KZBookshelfShelfView
+//	KZBookshelfBodyView
 //
 
-@implementation KZBookshelfShelfView
+@implementation KZBookshelfBodyView
 
++ (NSString *)kind
+{
+	return NSStringFromClass([self class]);
+}
 
 - (id)initWithCoder:(NSCoder *)decoder
 {
@@ -43,7 +48,19 @@
 - (void)layoutSubviews
 {
 	[super layoutSubviews];
-	self.image = [self.bookshelffView bottomImageForWidth:CGRectGetWidth(self.bounds)];;
+
+	self.image = [self.bookshelffView bodyImageForWidth:CGRectGetWidth(self.bounds)];;
+}
+
+- (void)dealloc
+{
+	NSLog(@"%s", __FUNCTION__);
+}
+
+- (void)prepareForReuse
+{
+	NSLog(@"%s", __FUNCTION__);
+	[super prepareForReuse];
 }
 
 /*

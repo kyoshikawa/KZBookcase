@@ -38,10 +38,10 @@
 		CCC68D08189EDACA00E23DB2 /* KZSampleBookshelfViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCC68D07189EDACA00E23DB2 /* KZSampleBookshelfViewController~ipad.xib */; };
 		CCC68D12189EF17600E23DB2 /* KZBookshelfItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC68D11189EF17600E23DB2 /* KZBookshelfItem.m */; };
 		CCC68D40189F04B000E23DB2 /* ZGeometricUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC68D3F189F04B000E23DB2 /* ZGeometricUtils.m */; };
-		CCC68D43189F10CA00E23DB2 /* KZBookshelfRowView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC68D42189F10CA00E23DB2 /* KZBookshelfRowView.m */; };
+		CCC68D43189F10CA00E23DB2 /* KZBookshelfBodyView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC68D42189F10CA00E23DB2 /* KZBookshelfBodyView.m */; };
 		CCC68D46189F15F200E23DB2 /* KZBookshelfItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC68D45189F15F200E23DB2 /* KZBookshelfItemCell.m */; };
 		CCC68D49189F48AE00E23DB2 /* UIView+Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC68D48189F48AE00E23DB2 /* UIView+Debug.m */; };
-		CCC68D4C189FE48F00E23DB2 /* KZBookshelfShelfView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC68D4B189FE48F00E23DB2 /* KZBookshelfShelfView.m */; };
+		CCC68D4C189FE48F00E23DB2 /* KZBookshelfBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC68D4B189FE48F00E23DB2 /* KZBookshelfBottomView.m */; };
 		CCDA8DA418A178A300224274 /* KZBookshelfSectionHeaderLayoutAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDA8DA318A178A300224274 /* KZBookshelfSectionHeaderLayoutAttributes.m */; };
 		CCDA8DC418A1911600224274 /* Bookshelf-Body-1024.png in Resources */ = {isa = PBXBuildFile; fileRef = CCDA8DA618A1911600224274 /* Bookshelf-Body-1024.png */; };
 		CCDA8DC518A1911600224274 /* Bookshelf-Body-1024@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CCDA8DA718A1911600224274 /* Bookshelf-Body-1024@2x.png */; };
@@ -134,14 +134,14 @@
 		CCC68D11189EF17600E23DB2 /* KZBookshelfItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; name = KZBookshelfItem.m; path = ../Sources/KZBookshelfItem.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		CCC68D3E189F04B000E23DB2 /* ZGeometricUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZGeometricUtils.h; sourceTree = "<group>"; };
 		CCC68D3F189F04B000E23DB2 /* ZGeometricUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZGeometricUtils.m; sourceTree = "<group>"; };
-		CCC68D41189F10CA00E23DB2 /* KZBookshelfRowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KZBookshelfRowView.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		CCC68D42189F10CA00E23DB2 /* KZBookshelfRowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = KZBookshelfRowView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		CCC68D41189F10CA00E23DB2 /* KZBookshelfBodyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KZBookshelfBodyView.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		CCC68D42189F10CA00E23DB2 /* KZBookshelfBodyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = KZBookshelfBodyView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		CCC68D44189F15F200E23DB2 /* KZBookshelfItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KZBookshelfItemCell.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		CCC68D45189F15F200E23DB2 /* KZBookshelfItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = KZBookshelfItemCell.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		CCC68D47189F48AE00E23DB2 /* UIView+Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Debug.h"; sourceTree = "<group>"; };
 		CCC68D48189F48AE00E23DB2 /* UIView+Debug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Debug.m"; sourceTree = "<group>"; };
-		CCC68D4A189FE48F00E23DB2 /* KZBookshelfShelfView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KZBookshelfShelfView.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
-		CCC68D4B189FE48F00E23DB2 /* KZBookshelfShelfView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = KZBookshelfShelfView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		CCC68D4A189FE48F00E23DB2 /* KZBookshelfBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KZBookshelfBottomView.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		CCC68D4B189FE48F00E23DB2 /* KZBookshelfBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = KZBookshelfBottomView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		CCDA8DA218A178A300224274 /* KZBookshelfSectionHeaderLayoutAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = KZBookshelfSectionHeaderLayoutAttributes.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		CCDA8DA318A178A300224274 /* KZBookshelfSectionHeaderLayoutAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = KZBookshelfSectionHeaderLayoutAttributes.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		CCDA8DA618A1911600224274 /* Bookshelf-Body-1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bookshelf-Body-1024.png"; sourceTree = "<group>"; };
@@ -324,10 +324,10 @@
 				CCC68D11189EF17600E23DB2 /* KZBookshelfItem.m */,
 				CC03600F189FEBFE00C598AD /* KZBookshelfReusableView.h */,
 				CC036010189FEBFE00C598AD /* KZBookshelfReusableView.m */,
-				CCC68D41189F10CA00E23DB2 /* KZBookshelfRowView.h */,
-				CCC68D42189F10CA00E23DB2 /* KZBookshelfRowView.m */,
-				CCC68D4A189FE48F00E23DB2 /* KZBookshelfShelfView.h */,
-				CCC68D4B189FE48F00E23DB2 /* KZBookshelfShelfView.m */,
+				CCC68D41189F10CA00E23DB2 /* KZBookshelfBodyView.h */,
+				CCC68D42189F10CA00E23DB2 /* KZBookshelfBodyView.m */,
+				CCC68D4A189FE48F00E23DB2 /* KZBookshelfBottomView.h */,
+				CCC68D4B189FE48F00E23DB2 /* KZBookshelfBottomView.m */,
 				CC03605D18A0548300C598AD /* KZBookshelfSectionView.h */,
 				CC03605E18A0548300C598AD /* KZBookshelfSectionView.m */,
 				CCDA8DA218A178A300224274 /* KZBookshelfSectionHeaderLayoutAttributes.h */,
@@ -593,11 +593,11 @@
 				CCC68CD2189ECD8100E23DB2 /* main.m in Sources */,
 				CCC68D40189F04B000E23DB2 /* ZGeometricUtils.m in Sources */,
 				CCC68D12189EF17600E23DB2 /* KZBookshelfItem.m in Sources */,
-				CCC68D43189F10CA00E23DB2 /* KZBookshelfRowView.m in Sources */,
+				CCC68D43189F10CA00E23DB2 /* KZBookshelfBodyView.m in Sources */,
 				CCC68D46189F15F200E23DB2 /* KZBookshelfItemCell.m in Sources */,
 				CC03605F18A0548300C598AD /* KZBookshelfSectionView.m in Sources */,
 				CCDA8DA418A178A300224274 /* KZBookshelfSectionHeaderLayoutAttributes.m in Sources */,
-				CCC68D4C189FE48F00E23DB2 /* KZBookshelfShelfView.m in Sources */,
+				CCC68D4C189FE48F00E23DB2 /* KZBookshelfBottomView.m in Sources */,
 				CCC68CFD189ED00400E23DB2 /* KZBookshelfView.m in Sources */,
 				CCC68D06189EDA1D00E23DB2 /* KZSampleBookshelfViewController.m in Sources */,
 				CCC68D49189F48AE00E23DB2 /* UIView+Debug.m in Sources */,

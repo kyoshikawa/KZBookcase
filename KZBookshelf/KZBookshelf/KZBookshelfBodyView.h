@@ -1,8 +1,8 @@
 //
-//  KZBookshelfShelfView.h
+//  KZBookshelfBodyView.h
 //  KZBookshelf
 //
-//  Created by Kaz Yoshikawa on 14/2/3.
+//  Created by Kaz Yoshikawa on 14/2/2.
 //  Copyright (c) 2014 Digital Lynx. All rights reserved.
 //
 
@@ -11,9 +11,9 @@
 
 
 //
-//	KZBookshelfShelfView
+//	KZBookshelfBodyView
 //
 
-@interface KZBookshelfShelfView : KZBookshelfReusableView
+@interface KZBookshelfBodyView : KZBookshelfReusableView
 
 @end

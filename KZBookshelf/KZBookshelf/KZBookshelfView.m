@@ -9,7 +9,7 @@
 #import "KZBookshelfView.h"
 #import "KZBookshelfViewLayout.h"
 #import "KZBookshelfItemCell.h"
-#import "KZBookshelfRowView.h"
+#import "KZBookshelfBodyView.h"
 #import "KZBookshelfSectionView.h"
 
 

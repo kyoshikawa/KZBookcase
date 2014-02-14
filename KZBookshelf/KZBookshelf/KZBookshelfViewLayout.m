@@ -9,8 +9,8 @@
 #import "KZBookshelfViewLayout.h"
 #import "KZBookshelfView.h"
 #import "KZBookshelfItem.h"
-#import "KZBookshelfRowView.h"
-#import "KZBookshelfShelfView.h"
+#import "KZBookshelfBodyView.h"
+#import "KZBookshelfBottomView.h"
 #import "KZBookshelfSectionView.h"
 #import "KZBookshelfSectionHeaderLayoutAttributes.h"
 #import "ZGeometricUtils.h"
@@ -60,8 +60,8 @@ enum {
 - (id)initWithCoder:(NSCoder *)decoder
 {
 	if (self = [super initWithCoder:decoder]) {
-		[self registerClass:[KZBookshelfRowView class] forDecorationViewOfKind:[KZBookshelfRowView kind]];
-		[self registerClass:[KZBookshelfShelfView class] forDecorationViewOfKind:[KZBookshelfShelfView kind]];
+		[self registerClass:[KZBookshelfBodyView class] forDecorationViewOfKind:[KZBookshelfBodyView kind]];
+		[self registerClass:[KZBookshelfBottomView class] forDecorationViewOfKind:[KZBookshelfBottomView kind]];
 	}
 	return self;
 }
@@ -82,14 +82,14 @@ enum {
 
 - (UICollectionViewLayoutAttributes *)layoutAttributesForRowWithIndexPath:(NSIndexPath *)indexPath
 {
-	UICollectionViewLayoutAttributes *attributes = [UICollectionViewLayoutAttributes layoutAttributesForDecorationViewOfKind:[KZBookshelfRowView kind] withIndexPath:indexPath];
+	UICollectionViewLayoutAttributes *attributes = [UICollectionViewLayoutAttributes layoutAttributesForDecorationViewOfKind:[KZBookshelfBodyView kind] withIndexPath:indexPath];
 	attributes.zIndex = -1;
 	return attributes;
 }
 
 - (UICollectionViewLayoutAttributes *)layoutAttributesForShelfWithIndexPath:(NSIndexPath *)indexPath
 {
-	UICollectionViewLayoutAttributes *attributes = [UICollectionViewLayoutAttributes layoutAttributesForDecorationViewOfKind:[KZBookshelfShelfView kind] withIndexPath:indexPath];
+	UICollectionViewLayoutAttributes *attributes = [UICollectionViewLayoutAttributes layoutAttributesForDecorationViewOfKind:[KZBookshelfBottomView kind] withIndexPath:indexPath];
 	attributes.zIndex = -1;
 	return attributes;
 }
